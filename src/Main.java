@@ -41,7 +41,7 @@ public class Main {
         * 3.
         * */
 
-        System.out.println("**** 3. Print area and perimeter of a circle");
+        System.out.println("**** 3. Print area and perimeter of a circle ****");
 
         double pi = 3.14;
 
