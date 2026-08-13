@@ -213,7 +213,7 @@ public class Main {
          int minutes = (seconds /60) /24;
          int second = ((seconds /(60 * 24)));
 
-        System.out.println(hours + "," + minutes + "," + second);
+        System.out.println(hours + ":" + minutes + ":" + second);
 
 
         System.out.println("=============================");
