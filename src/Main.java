@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
+
         /*
         * 1.
         * */
@@ -259,21 +260,19 @@ public class Main {
 
         System.out.println("**** 15. Check if numbers are positive or negative or zero ****");
 
-        System.out.print("Enter the count of numbers: ");
-        int countt = input.nextInt();
-
         int positiveNumbers = 0;
         int negativeNumbers = 0;
         int zeros = 0;
+        int numbe;
 
-        for (int i = 1; i <= countt; i++){
-            System.out.print("Enter number" + i + ": ");
-            int numbe = input.nextInt();
+        do{
+            System.out.print("Enter number: ");
+            numbe = input.nextInt();
 
             if(numbe == 0) ++zeros;
             else if (numbe > 0) ++positiveNumbers;
             else ++negativeNumbers;
-        }
+        } while (numbe != -1);
 
         System.out.println("The positive numbers is: " + positiveNumbers);
         System.out.println("The zero numbers is: " + zeros);
@@ -305,23 +304,25 @@ public class Main {
          * */
 
         System.out.println("**** 17. Check the large and small number ****");
-        System.out.print("Enter the count of numbers: ");
-        int counttt = input.nextInt();
 
         int largeNumber = 0;
         int smallNumber = 0;
-
-        for (int i = 1; i <= counttt; i++){
-            System.out.print("Enter number" + i + ": ");
+        boolean out;
+        do{
+            System.out.print("Enter number" + ": ");
             int numbee = input.nextInt();
-            if(i == 1){
+            if(largeNumber == 0 && smallNumber == 0){
                 largeNumber = numbee;
                 smallNumber = numbee;
             }
 
             if(largeNumber <= numbee) largeNumber = numbee;
             else smallNumber = numbee;
+
+            System.out.print("Do you want continue? true/false: ");
+            out = input.nextBoolean();
         }
+            while(out);
 
         System.out.println("The large numbers is: " + largeNumber);
         System.out.println("The small numbers is: " + smallNumber);
