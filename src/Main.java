@@ -211,8 +211,8 @@ public class Main {
         System.out.print("Enter seconds: ");
         int seconds = input.nextInt();
          int hours = seconds / 3600;
-         int minutes = (seconds /60) /24;
-         int second = ((seconds /(60 * 24)));
+         int minutes = (seconds % 3600)/60;
+         int second = (seconds %3600);
 
         System.out.println(hours + ":" + minutes + ":" + second);
 
@@ -317,7 +317,7 @@ public class Main {
             }
 
             if(largeNumber <= numbee) largeNumber = numbee;
-            else smallNumber = numbee;
+            if(smallNumber >= numbee) smallNumber = numbee;
 
             System.out.print("Do you want continue? true/false: ");
             out = input.nextBoolean();
